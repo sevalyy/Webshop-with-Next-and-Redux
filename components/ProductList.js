@@ -6,11 +6,11 @@ const ProductList = ({ products }) => {
   console.log(products, "products");
   return (
     <div>
-      <h1>Webshop </h1>
-      <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <h1 className="text-center font-extrabold text-4xl my-8">Webshop </h1>
+      <div className="m-8 grid grid-cols-1 md:grid-cols-3 gap-8 ">
         {products &&
           products.map((product) => (
-            <div className="  bg-white pt-6 shadow-xl">
+            <div className="  bg-white pt-6 shadow-xl border-2 border-grey-600 rounded-xl">
               <Image
                 src={product.image}
                 alt={product.title}
