@@ -9,7 +9,6 @@ export default function Home({ products }) {
       </Head>
 
       <main>
-        <h1>Webshop </h1>
         <ProductList products={products} />{" "}
       </main>
     </div>
