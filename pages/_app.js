@@ -1,7 +1,13 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
+import MasterPage from "../components/MasterPage";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <MasterPage>
+      {" "}
+      <Component {...pageProps} />
+    </MasterPage>
+  );
 }
 
-export default MyApp
+export default MyApp;
