@@ -11,20 +11,26 @@ const ProductList = ({ products }) => {
         {products &&
           products.map((product) => (
             <div className="  bg-white pt-6 shadow-xl border-2 border-grey-600 rounded-xl">
-              <Image
-                src={product.image}
-                alt={product.title}
-                width={250}
-                height={150}
-                className="mx-auto w-[350px] h-[200px] object-contain "
-              />
-              <div className="mt-4 px-6  ">
-                <h2>€ {product.price}</h2>
-                <p>{product.title}</p>
-                <button className="bg-black hover:bg-red text-white p-2  block mx-auto my-4 cursor-pointer">
-                  Add to basket
-                </button>
-              </div>
+              <Link
+                href="/products/[id]"
+                as={`/products/${product.id}`}
+                key={product.id}
+              >
+                <Image
+                  src={product.image}
+                  alt={product.title}
+                  width={250}
+                  height={150}
+                  className="mx-auto w-[350px] h-[200px] object-contain "
+                />
+                <div className="mt-4 px-6  ">
+                  <h2>€ {product.price}</h2>
+                  <p>{product.title}</p>
+                  <button className="bg-black hover:bg-red text-white p-2  block mx-auto my-4 cursor-pointer">
+                    Add to basket
+                  </button>
+                </div>
+              </Link>
             </div>
           ))}
       </div>
