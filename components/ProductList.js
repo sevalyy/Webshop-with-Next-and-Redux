@@ -1,8 +1,12 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
+import { useDispatch } from "react-redux";
+import { addToBasket } from "../store/basket/thunk";
 
 const ProductList = ({ products }) => {
+  const dispatch = useDispatch();
+
   console.log(products, "products");
   return (
     <div>
@@ -26,11 +30,16 @@ const ProductList = ({ products }) => {
                 <div className="mt-4 px-6  ">
                   <h2>€ {product.price}</h2>
                   <p>{product.title}</p>
-                  <button className="bg-black hover:bg-red text-white p-2  block mx-auto my-4 cursor-pointer">
-                    Add to basket
-                  </button>
                 </div>
               </Link>
+              <button
+                onClick={() => {
+                  dispatch(addToBasket(product.id));
+                }}
+                className="bg-black hover:bg-red text-white p-2  block mx-auto my-4 cursor-pointer"
+              >
+                Add to basket
+              </button>
             </div>
           ))}
       </div>

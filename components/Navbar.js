@@ -2,8 +2,8 @@ import Link from "next/link";
 import React from "react";
 import { FiShoppingCart } from "react-icons/fi";
 import { FaHome } from "react-icons/fa";
-
 import Image from "next/image";
+import BasketCount from "./BasketCount";
 
 const Navbar = () => {
   return (
@@ -24,7 +24,7 @@ const Navbar = () => {
         <Link href="/basket" className="relative">
           <FiShoppingCart className="cursor-pointer" />
           <span className="absolute -top-2 -right-2 text-[10px] bg-red-500 h-[20px] w-[20px] rounded-full grid place-items-center text-white">
-            0
+            <BasketCount />
           </span>
         </Link>
       </div>
