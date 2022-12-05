@@ -6,7 +6,7 @@ import { FaLinkedin } from "react-icons/fa";
 const Footer = () => {
   return (
     <div>
-      <footer className="w-full shadow-xl bg-yellow fixed left-0 bottom-0">
+      <footer className="w-full shadow-xl bg-black text-white ">
         <hr />
         <div className="container flex justify-between mx-auto text-[1.2em] py-4">
           <div>Let's keep in touch</div>
